@@ -7,7 +7,10 @@ This can then be retrieved and compared to expected value.
 
 ## Build and test
 
-After cloning obtain all necessary libraries in `lib`, as they are in the [Starter template](https://github.com/risc0/bonsai-foundry-template/tree/main/lib). TODO: correctly add submodules
+After cloning obtain all submodules in `lib`
+```
+git submodule update --init --recursive
+```
 
 Build:
 ```
