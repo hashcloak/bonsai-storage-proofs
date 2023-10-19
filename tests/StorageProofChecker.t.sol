@@ -28,7 +28,7 @@ contract StorageProofCheckerTest is BonsaiTest {
         // Deploy a new starter instance
         StorageProofChecker storageProofChecker = new StorageProofChecker(
             IBonsaiRelay(bonsaiRelay),
-            queryImageId('FIBONACCI'));
+            queryImageId('STORAGE_PROOF'));
 
         // Anticipate a callback request to the relay
         vm.expectCall(address(bonsaiRelay), abi.encodeWithSelector(IBonsaiRelay.requestCallback.selector));
@@ -89,7 +89,7 @@ contract StorageProofCheckerTest is BonsaiTest {
         // Deploy a new starter instance
         StorageProofChecker storageProofChecker = new StorageProofChecker(
             IBonsaiRelay(bonsaiRelay),
-            queryImageId('FIBONACCI'));
+            queryImageId('STORAGE_PROOF'));
 
         // Anticipate a callback request to the relay
         vm.expectCall(address(bonsaiRelay), abi.encodeWithSelector(IBonsaiRelay.requestCallback.selector));

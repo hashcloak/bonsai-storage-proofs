@@ -11,95 +11,6 @@
     ]
   },
   "files": {
-    "contracts/BonsaiStarter.sol": {
-      "lastModificationDate": 1696570325313,
-      "contentHash": "3fab29dd40d735ec8c00d3794131494d",
-      "sourceName": "contracts/BonsaiStarter.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "useLiteralContent": false,
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "paris",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "lib/risc0/bonsai/ethereum/contracts/BonsaiCallbackReceiver.sol",
-        "lib/risc0/bonsai/ethereum/contracts/IBonsaiRelay.sol"
-      ],
-      "versionRequirement": "^0.8.17",
-      "artifacts": {
-        "BonsaiStarter": {
-          "0.8.20+commit.a1b79de6.Darwin.appleclang": "BonsaiStarter.sol/BonsaiStarter.json"
-        }
-      }
-    },
-    "contracts/BonsaiStarterLowLevel.sol": {
-      "lastModificationDate": 1696570325314,
-      "contentHash": "deca58629a0bcdf54b9efd43c9eac5da",
-      "sourceName": "contracts/BonsaiStarterLowLevel.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "useLiteralContent": false,
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "paris",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "lib/risc0/bonsai/ethereum/contracts/BonsaiCallbackReceiver.sol",
-        "lib/risc0/bonsai/ethereum/contracts/BonsaiLowLevelCallbackReceiver.sol",
-        "lib/risc0/bonsai/ethereum/contracts/IBonsaiRelay.sol"
-      ],
-      "versionRequirement": "^0.8.17",
-      "artifacts": {
-        "BonsaiStarterLowLevel": {
-          "0.8.20+commit.a1b79de6.Darwin.appleclang": "BonsaiStarterLowLevel.sol/BonsaiStarterLowLevel.json"
-        }
-      }
-    },
     "contracts/StorageProofChecker.sol": {
       "lastModificationDate": 1696623945192,
       "contentHash": "0143eed56b5991d6732dca81072ff399",
@@ -1174,50 +1085,6 @@
         }
       }
     },
-    "lib/risc0/bonsai/ethereum/contracts/BonsaiLowLevelCallbackReceiver.sol": {
-      "lastModificationDate": 1696570348372,
-      "contentHash": "c803bf83fffe62b2d601a62513e0f515",
-      "sourceName": "lib/risc0/bonsai/ethereum/contracts/BonsaiLowLevelCallbackReceiver.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "useLiteralContent": false,
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "paris",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "lib/risc0/bonsai/ethereum/contracts/BonsaiCallbackReceiver.sol",
-        "lib/risc0/bonsai/ethereum/contracts/IBonsaiRelay.sol"
-      ],
-      "versionRequirement": "^0.8.17",
-      "artifacts": {
-        "BonsaiLowLevelCallbackReceiver": {
-          "0.8.20+commit.a1b79de6.Darwin.appleclang": "BonsaiLowLevelCallbackReceiver.sol/BonsaiLowLevelCallbackReceiver.json"
-        }
-      }
-    },
     "lib/risc0/bonsai/ethereum/contracts/BonsaiRelay.sol": {
       "lastModificationDate": 1696570348373,
       "contentHash": "2d33ade062923e6889829b0706da9297",
@@ -1722,8 +1589,8 @@
       }
     },
     "script/Deploy.s.sol": {
-      "lastModificationDate": 1696575102449,
-      "contentHash": "a48bc989a41dbc603e46f814aaaab4bb",
+      "lastModificationDate": 1697701818332,
+      "contentHash": "02e77a343829857b26dc129930029215",
       "sourceName": "script/Deploy.s.sol",
       "solcConfig": {
         "settings": {
@@ -1755,7 +1622,7 @@
         }
       },
       "imports": [
-        "contracts/BonsaiStarter.sol",
+        "contracts/StorageProofChecker.sol",
         "lib/forge-std/lib/ds-test/src/test.sol",
         "lib/forge-std/src/Base.sol",
         "lib/forge-std/src/Script.sol",
@@ -1793,158 +1660,9 @@
         }
       }
     },
-    "tests/BonsaiStarter.t.sol": {
-      "lastModificationDate": 1696588773643,
-      "contentHash": "c62da4981afc131f5948b007fcd0bd55",
-      "sourceName": "tests/BonsaiStarter.t.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "useLiteralContent": false,
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "paris",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "contracts/BonsaiStarter.sol",
-        "lib/forge-std/lib/ds-test/src/test.sol",
-        "lib/forge-std/src/Base.sol",
-        "lib/forge-std/src/StdAssertions.sol",
-        "lib/forge-std/src/StdChains.sol",
-        "lib/forge-std/src/StdCheats.sol",
-        "lib/forge-std/src/StdError.sol",
-        "lib/forge-std/src/StdInvariant.sol",
-        "lib/forge-std/src/StdJson.sol",
-        "lib/forge-std/src/StdMath.sol",
-        "lib/forge-std/src/StdStorage.sol",
-        "lib/forge-std/src/StdStyle.sol",
-        "lib/forge-std/src/StdUtils.sol",
-        "lib/forge-std/src/Test.sol",
-        "lib/forge-std/src/Vm.sol",
-        "lib/forge-std/src/console.sol",
-        "lib/forge-std/src/console2.sol",
-        "lib/forge-std/src/interfaces/IMulticall3.sol",
-        "lib/murky/differential_testing/test/utils/Strings2.sol",
-        "lib/openzeppelin-contracts/contracts/proxy/Proxy.sol",
-        "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol",
-        "lib/risc0/bonsai/ethereum/contracts/BonsaiCallbackReceiver.sol",
-        "lib/risc0/bonsai/ethereum/contracts/BonsaiCheats.sol",
-        "lib/risc0/bonsai/ethereum/contracts/BonsaiRelay.sol",
-        "lib/risc0/bonsai/ethereum/contracts/BonsaiRelayQueueWrapper.sol",
-        "lib/risc0/bonsai/ethereum/contracts/BonsaiTest.sol",
-        "lib/risc0/bonsai/ethereum/contracts/BonsaiTestRelay.sol",
-        "lib/risc0/bonsai/ethereum/contracts/IBonsaiRelay.sol",
-        "lib/risc0/bonsai/ethereum/contracts/IRiscZeroVerifier.sol",
-        "lib/risc0/bonsai/ethereum/contracts/groth16/Groth16Verifier.sol",
-        "lib/risc0/bonsai/ethereum/contracts/groth16/RiscZeroGroth16Verifier.sol",
-        "lib/risc0/bonsai/ethereum/lib/murky/differential_testing/test/utils/Strings2.sol"
-      ],
-      "versionRequirement": "^0.8.17",
-      "artifacts": {
-        "BonsaiStarterTest": {
-          "0.8.20+commit.a1b79de6.Darwin.appleclang": "BonsaiStarter.t.sol/BonsaiStarterTest.json"
-        }
-      }
-    },
-    "tests/BonsaiStarterLowLevel.t.sol": {
-      "lastModificationDate": 1696588783235,
-      "contentHash": "91821a9a32d0cae8a7207475c6ff8ff2",
-      "sourceName": "tests/BonsaiStarterLowLevel.t.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "useLiteralContent": false,
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "paris",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "contracts/BonsaiStarterLowLevel.sol",
-        "lib/forge-std/lib/ds-test/src/test.sol",
-        "lib/forge-std/src/Base.sol",
-        "lib/forge-std/src/StdAssertions.sol",
-        "lib/forge-std/src/StdChains.sol",
-        "lib/forge-std/src/StdCheats.sol",
-        "lib/forge-std/src/StdError.sol",
-        "lib/forge-std/src/StdInvariant.sol",
-        "lib/forge-std/src/StdJson.sol",
-        "lib/forge-std/src/StdMath.sol",
-        "lib/forge-std/src/StdStorage.sol",
-        "lib/forge-std/src/StdStyle.sol",
-        "lib/forge-std/src/StdUtils.sol",
-        "lib/forge-std/src/Test.sol",
-        "lib/forge-std/src/Vm.sol",
-        "lib/forge-std/src/console.sol",
-        "lib/forge-std/src/console2.sol",
-        "lib/forge-std/src/interfaces/IMulticall3.sol",
-        "lib/murky/differential_testing/test/utils/Strings2.sol",
-        "lib/openzeppelin-contracts/contracts/proxy/Proxy.sol",
-        "lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol",
-        "lib/risc0/bonsai/ethereum/contracts/BonsaiCallbackReceiver.sol",
-        "lib/risc0/bonsai/ethereum/contracts/BonsaiCheats.sol",
-        "lib/risc0/bonsai/ethereum/contracts/BonsaiLowLevelCallbackReceiver.sol",
-        "lib/risc0/bonsai/ethereum/contracts/BonsaiRelay.sol",
-        "lib/risc0/bonsai/ethereum/contracts/BonsaiRelayQueueWrapper.sol",
-        "lib/risc0/bonsai/ethereum/contracts/BonsaiTest.sol",
-        "lib/risc0/bonsai/ethereum/contracts/BonsaiTestRelay.sol",
-        "lib/risc0/bonsai/ethereum/contracts/IBonsaiRelay.sol",
-        "lib/risc0/bonsai/ethereum/contracts/IRiscZeroVerifier.sol",
-        "lib/risc0/bonsai/ethereum/contracts/groth16/Groth16Verifier.sol",
-        "lib/risc0/bonsai/ethereum/contracts/groth16/RiscZeroGroth16Verifier.sol",
-        "lib/risc0/bonsai/ethereum/lib/murky/differential_testing/test/utils/Strings2.sol"
-      ],
-      "versionRequirement": "^0.8.17",
-      "artifacts": {
-        "BonsaiStarterLowLevelTest": {
-          "0.8.20+commit.a1b79de6.Darwin.appleclang": "BonsaiStarterLowLevel.t.sol/BonsaiStarterLowLevelTest.json"
-        }
-      }
-    },
     "tests/StorageProofChecker.t.sol": {
-      "lastModificationDate": 1696624424664,
-      "contentHash": "06787df7be851b81f95099b57606d5f6",
+      "lastModificationDate": 1697701899992,
+      "contentHash": "3f80202409632cb4753d5f23d9548a42",
       "sourceName": "tests/StorageProofChecker.t.sol",
       "solcConfig": {
         "settings": {

@@ -4,8 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [[bin]]
-name = "fibonacci"
-path = "src/bin/fibonacci.rs"
+name = "storage_proof"
+path = "src/bin/storage_proof.rs"
 
 [dependencies]
 ethabi = { version = "18.0", default-features = false }

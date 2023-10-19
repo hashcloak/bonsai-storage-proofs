@@ -15,7 +15,7 @@
 #![no_main]
 
 use std::io::Read;
-
+#[allow(unused_imports)]
 use ethabi::{ethereum_types::U256, ParamType, Token};
 use risc0_zkvm::guest::env;
 use trie_db::{Trie, TrieDBBuilder, TrieLayout};
@@ -233,13 +233,6 @@ where
 	}
 }
 
-fn fibonacci(n: U256) -> U256 {
-    let (mut prev, mut curr) = (U256::one(), U256::one());
-    for _ in 2..=n.as_u32() {
-        (prev, curr) = (curr, prev + curr);
-    }
-    curr
-}
 
 #[derive(Debug)]
 pub struct KeccakHasher;
@@ -355,6 +348,7 @@ fn main() {
     };  
 
     // TODO add error handling
+	#[allow(non_snake_case)]
     let storageProof: StorageProofInput = serde_json::from_str(&extracted_string).unwrap();
 
     let key = KeccakHasher::hash(&storageProof.key);
